@@ -1,11 +1,16 @@
 # andsdk-files-for-ccc
-本项目是为了便于在 CocosCreator 项目中集成 AnySDK 而创建。
+本项目是为了便于在 CocosCreator 项目的 Android 平台中集成 AnySDK 而创建。
+
+该项目中的 AnySDK 文件由来请参考 [CocosCreator 集成 AnySDK 教程](http://eddy2015.github.io/blog/2016/06/22/ccc-plus-anysdk/)
 
 ##更新日志
 1. 2016-6-23 update AnySDK files for CocosCreator 1.1.1
 
 
 ##使用步骤
+
+###构建 Android 平台工程
+使用 CocosCreator 打开项目，点击 【项目】【构建发布】，**发布平台选择 “Android”， 模板选择 “default”**。然后点击 “构建”按钮 构建构建 Android 平台工程。
 
 ###下载 andsdk-files-for-ccc 项目
 
@@ -14,9 +19,12 @@ $ cd youdir
 $ git clone https://github.com/eddy2015/anysdk-files-for-ccc
 ```
 ###拷贝 AnySDK 文件到 CocosCreator 项目
+
+**注意：如果你已经对 CocosCreator 项目中的 Android 工程进行了大量修改，那么执行下面的操作前请三思。因为下列操作会新增或修改一些相关文件，如果想手动恢复原样是非常麻烦的。推荐把 Android 工程目录也添加到 git 或者其他版本管理工具中管理。**
+
 该步骤需要安装 Python，并配置好环境变量。copy-anysdk-files.py 脚本会把 andsdk-files-for-ccc/build 目录下的所有文件**拷贝覆盖**到 CocosCreator 项目中。
 
-当然你也可以手动拷贝，拷贝到项目中对应的目录即可。
+当然你也可以手动拷贝，拷贝 andsdk-files-for-ccc/build 到CocosCreator 项目的目录即可，**拷贝时选择合并**。
 
 python copy-anysdk-files.py +你的 CocosCreator 项目路径。
 如下：
