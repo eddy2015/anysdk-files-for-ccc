@@ -4,6 +4,7 @@ import shutil
 import sys
 
 libdir = ""
+count = 0
 
 def copyfile(file):
     global libdir
@@ -21,16 +22,18 @@ def copyfile(file):
 
             shutil.copyfile(file, libdir + file)
             # print "copy file: " + file
+            count = count + 1
         elif os.path.isdir(file):
             # shutil.copytree(file, libdir + file)
             # print "copy dir: " + file
             for root, dirs, files in os.walk(file):
-                for dir in  dirs:
-                    # print(os.path.join(root,dir))
-                    copyfile(os.path.join(root,dir));   
+                # for dir in  dirs:
+                #     # print(os.path.join(root,dir))
+                #     copyfile(os.path.join(root,dir));   
                 for f in files:
-                    # print(os.path.join(root,f))
-                    copyfile(os.path.join(root,f))
+                    # print(f)
+                    if not f == ".DS_Store":
+                    	copyfile(os.path.join(root,f))
        
     return
 
@@ -52,5 +55,6 @@ libdir = cccprojdir + "/"
 copyfile("./build/")
 
 print "--------------------"
+print "copy " + str(count) + " files"
 print "copy all anysdk files finished"
 
