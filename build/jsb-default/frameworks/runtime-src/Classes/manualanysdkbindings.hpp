@@ -6,5 +6,7 @@
 
 void register_all_anysdk_manual(JSContext* cx, JS::HandleObject obj);
 
+void pure_all_anysdk_Listener();
+
 #endif
 
