@@ -42,7 +42,7 @@ $ python copy-anysdk-files.py /Users/eddy/Documents/CocosCreatorGitHub/testanysd
 例如 build/jsb-default/frameworks/runtime-src/proj.android/AndroidManifest.xml 文件中的 Android APK 包名被改动了，你需要手动修改回原来的包名。其他文件一般不需要手动修复，但或许你改动了 AppActivity.java 文件也是比较常见的。
 
 如下图：
-![e5fc1e3970bd88c2fdbe762236273989.png](http://moefq.com/images/2016/06/23/e5fc1e3970bd88c2fdbe762236273989.png)
+![](http://o9sn2y8lr.bkt.clouddn.com/16-7-5/34021975.jpg)
 
 copy-anysdk-files.py 改动的文件如下：
 
